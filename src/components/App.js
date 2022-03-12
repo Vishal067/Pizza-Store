@@ -12,29 +12,6 @@ class App extends Component {
     orderTotal: 0,
     checkoutTotal: 0,
   }
-
-  componentDidMount(){
-    const localStorageOrder = localStorage.getItem('order');
-    const localStorageOrderAmount = localStorage.getItem('orderAmount');
-    const localStorageTotal = localStorage.getItem('total');
-    const localStorageCustomerDetails = localStorage.getItem('customerDetails');
-    if(localStorageOrder) {
-      this.setState({
-        order: JSON.parse(localStorageOrder),
-        orderTotal: JSON.parse(localStorageOrderAmount),
-        checkoutTotal: JSON.parse(localStorageTotal),
-        customer: JSON.parse(localStorageCustomerDetails)
-      });
-    }
-  }
-
-  componentDidUpdate(){
-    localStorage.setItem('order', JSON.stringify(this.state.order));
-    localStorage.setItem('orderAmount', JSON.stringify(this.state.orderTotal));
-    localStorage.setItem('total', JSON.stringify(this.state.checkoutTotal));
-    localStorage.setItem('customerDetails', JSON.stringify(this.state.customer));
-  }
-
   addToOrder = (key) => {
     const order = { ...this.state.order};
     order[key] = + order[key] + 1  || 1;
