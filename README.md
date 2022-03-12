@@ -1,3 +1,3 @@
 # Pizza Store in React 🍕 🍕 🍕
 
-[View demo](https://github.com/Vishal067/)
+[View demo](https://pizzastore21.web.app/)
