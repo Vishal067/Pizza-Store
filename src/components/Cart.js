@@ -18,7 +18,7 @@ class Cart extends Component {
 
   render () {
     const totalPizzaPrice = this.props.orderTotal
-    const deliveryPrice = this.props.orderTotal < 400 ? 400 : 0
+    const deliveryPrice = this.props.orderTotal < 300 ? 50 : 0
     const checkoutTotal = totalPizzaPrice + deliveryPrice
 
     if (this.props.orderTotal === 0) {
